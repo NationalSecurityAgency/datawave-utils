@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>gov.nsa.datawave</groupId>
     <artifactId>datawave-code-style</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>DataWave Code Formatter</name>
     <description>This pom configures the formatter-maven-plugin to format the code
         according to the DataWave code style.</description>
-    <url>https://code.nsa.gov/datawave</url>
+    <url>https://code.nsa.gov/datawave-urils</url>
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -16,9 +16,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/NationalSecurityAgency/datawave.git</connection>
-        <developerConnection>scm:git:git@github.com:NationalSecurityAgency/datawave.git</developerConnection>
-        <url>https://github.com/NationalSecurityAgency/datawave</url>
+        <connection>scm:git:https://github.com/NationalSecurityAgency/datawave-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:NationalSecurityAgency/datawave-utils.git</developerConnection>
+        <url>https://github.com/NationalSecurityAgency/datawave-utils</url>
     </scm>
     <distributionManagement>
         <repository>

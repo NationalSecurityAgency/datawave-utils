@@ -6,12 +6,12 @@
 
     <groupId>gov.nsa.datawave.plugins</groupId>
     <artifactId>assert-properties</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.2-SNAPSHOT</version>
 
     <packaging>maven-plugin</packaging>
     <name>DataWave Assert Properties Plugin</name>
     <description>Asserts that required maven properties have been defined.</description>
-    <url>https://code.nsa.gov/datawave</url>
+    <url>https://code.nsa.gov/datawave-utils</url>
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -19,9 +19,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:https://github.com/NationalSecurityAgency/datawave.git</connection>
-        <developerConnection>scm:git:git@github.com:NationalSecurityAgency/datawave.git</developerConnection>
-        <url>https://github.com/NationalSecurityAgency/datawave</url>
+        <connection>scm:git:https://github.com/NationalSecurityAgency/datawave-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:NationalSecurityAgency/datawave-utils.git</developerConnection>
+        <url>https://github.com/NationalSecurityAgency/datawave-utils</url>
     </scm>
     <distributionManagement>
         <repository>
