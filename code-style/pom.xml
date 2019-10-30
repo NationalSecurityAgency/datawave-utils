@@ -39,6 +39,9 @@
                     <message>Maven artifacts for ${project.name} ${project.version}</message>  <!-- git commit message -->
                     <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+                    <!-- use the NationalSecurityAgency/datawave repo's mvn-repo branch, not the current repo -->
+                    <repositoryOwner>NationalSecurityAgency</repositoryOwner>
+                    <repositoryName>datawave</repositoryName>
                     <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
                     <includes><include>**/*</include></includes>
                     <merge>true</merge>
@@ -56,9 +59,19 @@
             <plugin>
                 <!-- NOTE: This plugin can go away once we are able to publish artifacts to maven central. -->
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
+                <version>3.0.0-M1</version>
                 <configuration>
                     <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagNameFormat>@{project.artifactId}_@{project.version}</tagNameFormat>
+                    <releaseProfiles>dist</releaseProfiles>
+                    <arguments>-Ddist</arguments>
                 </configuration>
             </plugin>
         </plugins>
